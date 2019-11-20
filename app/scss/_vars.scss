@@ -1,0 +1,21 @@
+//--------------vars-------------------
+$overflow-elem: rgba(#fff, 0.35);
+$overflow-text: rgba(#fff, 0.75);
+//-------------------------------------
+//-------------mixins------------------
+
+@mixin bg-prop {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin pseudo-bg {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+//-------------------------------------

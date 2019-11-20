@@ -2,8 +2,212 @@
 @import "libs";
 @import "fonts";
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  color: #fff;
+}
 
+ul {
+  padding: 0;
+  list-style-type: none;
+}
 
+a {
+  text-decoration: none;
+}
 
+//------------Slider-dots------
+.onepage-pagination {
+  transform: translateY(-50%);
+  right: 25px;
+  li + li {
+    margin-top: 5px;
+  }
+}
+.onepage-pagination li a:before {
+  background: $overflow-elem;
+  width: 10px;
+  height: 10px;
+}
+.onepage-pagination li a.active:before {
+  border-color: $overflow-elem;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+}
+//-----------------------------
+.main {
+  position: relative;
+  section {
+    padding: 3rem;
+    height: 100vh;
+    background-color: #fff;
+  }
+}
+.main-item {
+  filter: grayscale(100%);
+
+  @keyframes graceIn {
+    0% {
+      filter: grayscale(100%);
+    }
+    100% {
+      filter: grayscale(30%);
+    }
+  }
+
+  @keyframes graceOut {
+    0% {
+      filter: grayscale(30%);
+    }
+    100% {
+      filter: grayscale(100%);
+    }
+  }
+}
+.main-aside {
+  position: absolute;
+  z-index: 10;
+  width: 7rem;
+  height: 80vh;
+  border-right: 1px solid $overflow-elem;
+  mix-blend-mode: difference;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  &__scrollbar {
+    position: absolute;
+    right: -2px;
+    width: 3px;
+    height: 20%;
+    border-right: 3px solid rgba(#fff, 0.5);
+    transition: 1.5s ease;
+  }
+}
+.main-nav {
+  position: absolute;
+  z-index: 10;
+  top: 8vh;
+  right: 8%;
+  ul {
+    display: flex;
+    border-bottom: 1px solid $overflow-elem;
+    li + li {
+      margin-left: 15px;
+    }
+  }
+  &__item {
+    display: block;
+    position: relative;
+    padding: 5px 12px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $overflow-text;
+    &.active {
+      padding: 5px 5px;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+    &.active::after {
+      width: 100%;
+    }
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 10%;
+      bottom: -2px;
+      left: 0;
+      border-bottom: 3px solid $overflow-elem;
+
+      transition: 0.5s;
+    }
+  }
+}
+.main-item__bg {
+	@include pseudo-bg;
+	background: radial-gradient(
+        circle,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.1) 10%,
+				rgba(0, 0, 0, 0.33) 23%,
+				rgba(0, 0, 0, 0.35) 25%,
+				rgba(0, 0, 0, 0.4) 28%,
+				rgba(0, 0, 0, 0.45) 30%,
+				rgba(0, 0, 0, 0.5) 33%,
+				rgba(0, 0, 0, 0.55) 35%,
+				rgba(0, 0, 0, 0.58) 38%,
+				rgba(0, 0, 0, 0.60) 40%,
+				rgba(0, 0, 0, 0.63) 43%,
+				rgba(0, 0, 0, 0.65) 45%,
+				rgba(0, 0, 0, 0.70) 48%,
+				rgba(0, 0, 0, 0.73) 50%,
+				rgba(0, 0, 0, 0.78) 55%,
+				rgba(0, 0, 0, 0.83) 60%,
+				rgba(0, 0, 0, 0.85) 65%,
+				rgba(0, 0, 0, 0.9) 70%,
+        rgba(0, 0, 0, 0.95) 80%,
+        rgba(0, 0, 0, 0.97) 100%
+      )
+      center center;
+    background-size: 300% 300%;
+
+  @keyframes gradientBgIn {
+    0% {
+      background-size: 300% 300%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+  @keyframes gradientBgOut {
+    0% {
+      background-size: 100% 100%;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+}
+.header {
+  background-image: url(../images/header-bg.jpg);
+  @include bg-prop;
+  .main-item__bg {
+    
+  }
+}
+.about-me {
+  background-image: url(../images/about-me-bg.jpg);
+  @include bg-prop;
+  .main-item__bg {
+    width: 170%;
+  }
+}
+.section-3 {
+  background-image: url(../images/section-3-bg.jpg);
+  @include bg-prop;
+  .main-item__bg {
+    width: 150%;
+    left: unset;
+    right: 0;
+  }
+}
+.section-4 {
+  background-image: url(../images/section-4-bg.jpg);
+  @include bg-prop;
+  .main-item__bg {
+    
+  }
+}
 
 @import "media";
