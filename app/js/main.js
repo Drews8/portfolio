@@ -32,6 +32,13 @@
 	);
 	wow.init();
 
+	slider.init({
+		// intervalSpeed: 1000,
+		currentItem: 0,
+		buttons: false,
+		dots: true
+	});
+
 	let navItems = document.querySelectorAll(".main-nav__item");
 	let animProperties = {
 		fadeInLeft: "fadeOutLeft",
@@ -40,6 +47,8 @@
 		fadeOutRight: "fadeInRight",
 		fadeIn: "fadeOut",
 		fadeOut: "fadeIn",
+		fadeInDown: "fadeOutUp",
+		fadeOutUp: "fadeInDown",
 
 	}
 

@@ -1,6 +1,7 @@
 //--------------vars-------------------
 $overflow-elem: rgba(#fff, 0.35);
 $overflow-title: rgba(#fff, 0.75);
+$overflow-title-bold: rgba(#fff, 0.85);
 $overflow-text: rgba(#fff, 0.5);
 //-------------------------------------
 //-------------mixins------------------
@@ -18,5 +19,31 @@ $overflow-text: rgba(#fff, 0.5);
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@mixin hr-lines {
+	&::before,
+    &::after {
+			z-index: -1;
+      content: "";
+
+      width: 0%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+
+      border: 0px solid $overflow-elem;
+      border-top-width: 2px;
+      border-bottom-width: 2px;
+      transition: 0.7s;
+    }
+    &::before {
+			right: 50%;
+			
+    }
+    &::after {
+			left: 50%;
+			
+    }
 }
 //-------------------------------------
