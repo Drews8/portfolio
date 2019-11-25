@@ -1,0 +1,164 @@
+@media (max-width: 1330px) {
+  :root {
+    font-size: 16px;
+  }
+  .about-me {
+    &-inner {
+      padding: 1.5rem 0;
+    }
+    &__img {
+      height: 50vw;
+    }
+  }
+}
+
+@media (max-width: 1130px) {
+  :root {
+    font-size: 14px;
+  }
+  .main-aside {
+    width: 4rem;
+  }
+  .dots {
+    bottom: 10vh;
+  }
+  .prev-arrow {
+    left: 2rem;
+  }
+  .next-arrow {
+    right: 3rem;
+  }
+  .portfolio {
+    &-wrapper {
+      width: 90vw;
+    }
+    &-item {
+      width: 100%;
+      height: 100vw;
+    }
+    &-device {
+      bottom: 25vw;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-nav {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .main-aside {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 936px) {
+  .skills {
+    &-item {
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .main-aside {
+    height: 80vh;
+    width: 1rem;
+  }
+  .about-me {
+    &-wrapper {
+      padding: 5rem;
+    }
+    &-inner {
+      display: block;
+    }
+    &__img {
+      float: left;
+    }
+    &__text {
+      max-width: 700px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main-nav ul {
+    li + li {
+      margin-left: 0;
+    }
+  }
+  .about-me {
+    &-wrapper {
+      padding: 3rem;
+    }
+  }
+}
+
+@media (max-width: 505px) {
+  .main-nav {
+    display: none;
+	}
+	.onepage-pagination{
+		right: 1rem;
+	}
+  .skills-wrapper {
+    height: 100%;
+    top: 50%;
+    //transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+  .skills-items {
+    max-height: none;
+  }
+  .skills-item {
+    padding: 0 0.5rem;
+  }
+  .skills-item + .skills-item {
+    padding-top: 0.5rem;
+  }
+  .portfolio-wrapper {
+    width: 100vw;
+  }
+  .prev-arrow,
+  .next-arrow {
+    color: $overflow-title;
+  }
+  .contacts {
+    &-wrapper {
+      top: calc(50% - 1rem);
+    }
+    &-inner {
+      max-width: 80%;
+      padding: 0;
+    }
+
+    &-item {
+      padding: 1rem 0;
+      &__title {
+        display: inline-block;
+      }
+      &__text {
+        padding: 0.5rem;
+        margin-left: 0;
+      }
+      &:not(:last-child) {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: 400px){
+	:root{
+		font-size: 12px;
+	}
+}
+@media (max-width: 350px){
+	:root{
+		font-size: 10px;
+	}
+}

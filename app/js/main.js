@@ -47,8 +47,10 @@
 		fadeOutRight: "fadeInRight",
 		fadeIn: "fadeOut",
 		fadeOut: "fadeIn",
-		fadeInDown: "fadeOutUp",
-		fadeOutUp: "fadeInDown",
+		fadeInDown: "fadeOutDown",
+		fadeOutDown: "fadeInDown",
+		/* fadeInUp: "fadeOutDown",
+		fadeOutUp: "fadeInUp", */
 
 	}
 
@@ -75,22 +77,22 @@
 			document.querySelectorAll(".main-item__bg")[preventSlideIndex].style.animation = `gradientBgOut 1s ease-in-out forwards`;
 			document.querySelectorAll(".main-item")[preventSlideIndex].style.animation = `graceOut .5s ease-in-out forwards`;
 			document.querySelectorAll(".main-nav__item")[preventSlideIndex].classList.toggle("active");
-//////////////////////////////////////teeeest
+			//////////////////////////////////////teeeest
 			let contentOut = document.querySelectorAll(".wow");
 			for (let i = 0; i < contentOut.length; i++) {
-				console.log(contentOut[i].classList[2]);
 				let animElement = contentOut[i].classList[2];
 
-				if (document.querySelectorAll(".main-item")[index - 1].classList[1] === contentOut[i].classList[0].replace(/_.*/, '')) {
+
+				if (document.querySelectorAll(".main-item")[index - 1].classList[1] === contentOut[i].classList[0].replace(/_.*/, '') || document.querySelectorAll(".main-item")[index - 1].classList[1] === contentOut[i].classList[0].replace(/-.*/, '')) {
 					contentOut[i].classList.remove(animElement);
 					contentOut[i].classList.add(animProperties[animElement]);
-					contentOut[i].style.animation = `${animProperties[animElement]} ${0.1}s forwards`;
+					contentOut[i].style.animation = `${animProperties[animElement]} ${0.01}s forwards`;
 
 				} else {
 
 					contentOut[i].classList.remove(animElement);
 					contentOut[i].classList.add(animProperties[animElement]);
-					contentOut[i].style.animation = `${animProperties[animElement]} 1s forwards`;
+					contentOut[i].style.animation = `${animProperties[animElement]} 1.01s forwards`;
 					//${contentOut[i].getAttribute("data-wow-duration")}
 				}
 			}
@@ -115,7 +117,7 @@
 				contentOut[i].style.visibility = `visible`;
 				// console.log(contentOut[i].getAttribute("data-wow-duration"));
 				contentOut[i].style.animation = `${animProperties[animElement]} ${contentOut[i].getAttribute("data-wow-duration")} forwards`;
-				
+
 			}
 		}
 	}
