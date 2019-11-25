@@ -74,10 +74,12 @@
       display: block;
     }
     &__img {
-      float: left;
+			float: left;
+			margin-right: 1rem;
     }
     &__text {
-      max-width: 700px;
+			max-width: 700px;
+			
     }
   }
 }
@@ -90,8 +92,11 @@
   }
   .about-me {
     &-wrapper {
-      padding: 3rem;
-    }
+      padding: 2rem;
+		}
+		&-text{
+			padding: 0;
+		}
   }
 }
 

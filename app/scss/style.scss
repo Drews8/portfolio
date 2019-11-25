@@ -23,7 +23,10 @@ ul {
 a {
   text-decoration: none;
 }
-
+h1,h2,h3{
+	margin: 0;
+	font-weight: normal;
+}
 //------------Slider-dots------
 .onepage-pagination {
   transform: translateY(-50%);
@@ -275,7 +278,7 @@ a {
   }
 }
 .skills {
-  background-image: url(../images/section-3-bg.jpg);
+  background-image: url(../images/skills-bg.jpg);
   .main-item__bg {
     width: 170%;
     height: 150%;
@@ -363,7 +366,7 @@ a {
 }
 
 .portfolio {
-  background-image: url(../images/section-4-bg.jpg);
+  background-image: url(../images/portfolio-bg.jpg);
 
   &-wrapper {
     position: absolute;
@@ -468,7 +471,13 @@ a {
   }
 }
 .contacts {
-  background-image: url(../images/section-4-bg.jpg);
+	background-image: url(../images/contacts-bg.jpg);
+	.main-item__bg{
+		width: 150%;
+		left: -50%;
+		bottom: -50%;
+		height: 150%;
+	}
   &-wrapper {
     position: absolute;
     max-width: 1200px;
