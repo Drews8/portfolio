@@ -1,57 +1,83 @@
 @font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.woff') format('woff');
-  
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'icomoon-react';
+  src: url('../fonts/react.woff') format('woff');
+
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
 
-
-
 .icon-css3:before {
   content: "\e900";
-	color: #1572b6;
+  color: #1572b6;
 }
+
 .icon-github1:before {
   content: "\e901";
 }
+
 .icon-gulp:before {
   content: "\e902";
   color: #da4648;
 }
+
 .icon-html5:before {
   content: "\e905";
   color: #e34f26;
 }
+
 .icon-javascript:before {
   content: "\e906";
   color: #f7df1e;
 }
+
 .icon-jquery:before {
   content: "\e903";
   color: #0769ad;
 }
+
 .icon-sass:before {
   content: "\e904";
   color: #c69;
 }
+
 .icon-envelope-o:before {
   content: "\f003";
 }
+
 .icon-linkedin-square:before {
   content: "\f08c";
 }
+
 .icon-phone-square:before {
   content: "\f098";
 }
+
 .icon-github:before {
   content: "\f09b";
 }
+
 .icon-envelope:before {
   content: "\f0e0";
 }
+
 .icon-telegram:before {
   content: "\f2c6";
+}
+
+.icon-react:before {
+  font-family: 'icomoon-react';
+  content: "\e907";
+  color: #0769ad;
+
 }

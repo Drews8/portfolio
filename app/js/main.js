@@ -1,4 +1,5 @@
-(function () {
+window.addEventListener('load', () => {
+	document.querySelector('.loader-wrapper').remove();
 
 
 	onePageScroll(".main", {
@@ -128,4 +129,4 @@
 		moveTo("main", index + 1);
 	}
 
-})();
+})
